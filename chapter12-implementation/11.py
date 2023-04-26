@@ -22,8 +22,8 @@ queue.append((0, 0))
 
 change_num = int(input())
 for i in range(change_num):
-    X, C = map(int, input().split())
-    directDict[(X)] = C  #{X1:C1, X2:C2 ...}
+    X, C = input().split()
+    directDict[int(X)] = C  #{X1:C1, X2:C2 ...}
 
 
 
