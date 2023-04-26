@@ -13,7 +13,7 @@ for i in range(apple_num):
 
 
 
-dx = [0, 1, 0, -1]  # 하우상좌
+dx = [0, 1, 0, -1] #[열+1,행+1,열-1,행-1]
 dy = [1, 0, -1, 0]
 directDict = dict()
 queue = deque()
@@ -27,7 +27,7 @@ for i in range(change_num):
 
 
 
-x, y = 0, 0
+x, y = 0, 0 #x:행 y:열
 board[x][y] = 1  #초기값 board[0][0] =1 
 cnt = 0
 direction = 0
@@ -35,7 +35,7 @@ direction = 0
 # ?
 def turn(alpha):
     global direction
-    if alpha == 'L':
+    if alpha == 'L': #왼쪽
         direction = (direction - 1) % 4
     else:  #D-오른쪽
         direction = (direction + 1) % 4
@@ -43,7 +43,7 @@ def turn(alpha):
 
 while True:
     cnt += 1  #초 
-    x += dx[direction]
+    x += dx[direction]   #[열+1,행+1,열-1,행-1] 초기값  direction 0 이니까 열+1
     y += dy[direction]
 
     if x < 0 or x >= N or y < 0 or y >= N: #벽에 부딫히면 게임끝
