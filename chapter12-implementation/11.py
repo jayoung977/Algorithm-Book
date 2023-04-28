@@ -32,7 +32,7 @@ board[x][y] = 1  #초기값 board[0][0] =1
 cnt = 0
 direction = 0
 
-# ?
+
 def turn(alpha):
     global direction
     if alpha == 'L': #왼쪽
